@@ -9,8 +9,8 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 
 // Main Settings
 const settings = {
-  xThreshold: 20,
-  yThreshold: 35,
+  xThreshold: 40,
+  yThreshold: 50,
   originalImagePath: "../img/photo10.jpg",
   depthImagePath: "../img/depth10.png",
 };
@@ -284,8 +284,8 @@ window.addEventListener(
     // 예를 들어, 아래와 같이 움직일 수 있습니다.
     // cursor.x = x === 0 || x === 90 ? 0 : x > 0 ? -0.5 : 0.5;
     // cursor.y = y === 0 || y === 90 ? 0 : y > 0 ? -0.5 : 0.5;
-    cursor.x = x === 0 ? 0 : x / 100;
-    cursor.y = y === 0 ? 0 : y / 100;
+    cursor.x = x === 0 ? 0 : x / 90;
+    cursor.y = y === 0 ? 0 : y / 90;
 
     // const moveX = x * 2;
     // const moveY = y * 2;
