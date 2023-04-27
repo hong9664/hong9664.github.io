@@ -11,8 +11,8 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 const settings = {
   xThreshold: 20,
   yThreshold: 35,
-  originalImagePath: "../img/testPhoto2.jpg",
-  depthImagePath: "../img/testDepth2.jpg",
+  originalImagePath: "../img/photo10.jpg",
+  depthImagePath: "../img/depth10.png",
 };
 
 // Sizes
@@ -252,8 +252,8 @@ window.addEventListener("touchmove", (event) => {
 });
 
 window.addEventListener("touchend", (event) => {
-  cursor.x = 0;
-  cursor.y = 0;
+  cursor.x = x / 10;
+  cursor.y = y / 10;
 });
 
 /**모바일 기울기 이벤트 */
