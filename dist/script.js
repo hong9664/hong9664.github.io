@@ -9,7 +9,7 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 
 // Main Settings
 const settings = {
-  xThreshold: 40,
+  xThreshold: 12,
   yThreshold: 50,
   originalImagePath: "../img/photo10.jpg",
   depthImagePath: "../img/depth10.png",
