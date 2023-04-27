@@ -7,11 +7,12 @@ html,
 body {
   overflow: hidden;
   background-color: black;
+  color: #fff;
 }
 
 .webgl {
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
   outline: none;
 }
