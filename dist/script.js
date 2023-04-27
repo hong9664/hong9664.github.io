@@ -262,14 +262,15 @@ window.addEventListener("touchend", (event) => {
 window.addEventListener(
   "deviceorientation",
   (event) => {
-    const x = event.beta; // 디바이스의 x축 기울기
-    const y = event.gamma; // 디바이스의 y축 기울기
+    alert("기울기 이벤트 발생");
+    // const x = event.beta; // 디바이스의 x축 기울기
+    // const y = event.gamma; // 디바이스의 y축 기울기
 
-    // x, y 값을 이용하여 적절한 움직임을 적용합니다.
-    // 예를 들어, 아래와 같이 움직일 수 있습니다.
-    const moveX = x * 2;
-    const moveY = y * 2;
-    element.style.transform = "translate(" + moveX + "px, " + moveY + "px)";
+    // // x, y 값을 이용하여 적절한 움직임을 적용합니다.
+    // // 예를 들어, 아래와 같이 움직일 수 있습니다.
+    // const moveX = x * 2;
+    // const moveY = y * 2;
+    // element.style.transform = "translate(" + moveX + "px, " + moveY + "px)";
   },
   true
 );
