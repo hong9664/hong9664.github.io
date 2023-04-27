@@ -3,7 +3,7 @@ console.clear();
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0";
 import * as dat from "https://cdn.skypack.dev/dat.gui";
 
-/**
+/**s
  * Variables
  */
 
@@ -276,8 +276,8 @@ window.addEventListener("touchend", (event) => {
 window.addEventListener(
   "deviceorientation",
   (event) => {
-    const x = event.beta; // 디바이스의 x축 기울기
-    const y = event.gamma; // 디바이스의 y축 기울기
+    const x = event.gamma; // 디바이스의 x축 기울기
+    const y = event.beta; // 디바이스의 y축 기울기
     const z = event.alpha; // 디바이스의 z축 회전값
 
     // x, y, z 값을 이용하여 적절한 움직임을 적용합니다.
