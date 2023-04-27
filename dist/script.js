@@ -259,21 +259,33 @@ window.addEventListener("touchend", (event) => {
 });
 
 /**모바일 기울기 이벤트 */
-window.addEventListener(
-  "deviceorientation",
-  (event) => {
-    alert("기울기 이벤트 발생");
-    // const x = event.beta; // 디바이스의 x축 기울기
-    // const y = event.gamma; // 디바이스의 y축 기울기
+// window.addEventListener(
+//   "deviceorientation",
+//   (event) => {
+//     alert("기울기 이벤트 발생");
+//     // const x = event.beta; // 디바이스의 x축 기울기
+//     // const y = event.gamma; // 디바이스의 y축 기울기
 
-    // // x, y 값을 이용하여 적절한 움직임을 적용합니다.
-    // // 예를 들어, 아래와 같이 움직일 수 있습니다.
-    // const moveX = x * 2;
-    // const moveY = y * 2;
-    // element.style.transform = "translate(" + moveX + "px, " + moveY + "px)";
-  },
-  true
-);
+//     // // x, y 값을 이용하여 적절한 움직임을 적용합니다.
+//     // // 예를 들어, 아래와 같이 움직일 수 있습니다.
+//     // const moveX = x * 2;
+//     // const moveY = y * 2;
+//     // element.style.transform = "translate(" + moveX + "px, " + moveY + "px)";
+//   },
+//   true
+// );
+
+window.addEventListener("deviceorientation", handleOrientation);
+
+function handleOrientation(event) {
+  const alpha = event.alpha; // 디바이스의 z 축 회전값
+  const beta = event.beta; // 디바이스의 x 축 회전값
+  const gamma = event.gamma; // 디바이스의 y 축 회전값
+
+  // 이벤트가 발생할 때마다 실행할 코드 작성
+
+  alert(alpha);
+}
 
 /**
  * Renderer
