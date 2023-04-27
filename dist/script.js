@@ -11,8 +11,8 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 const settings = {
   xThreshold: 20,
   yThreshold: 35,
-  originalImagePath: "../img/photo2.jpg",
-  depthImagePath: "../img/depth2.jpg",
+  originalImagePath: "../img/testPhoto2.jpg",
+  depthImagePath: "../img/testDepth2.jpg",
 };
 
 // Sizes
@@ -173,7 +173,6 @@ gui
     Dog: "https://assets.codepen.io/122136/dog-photo.jpg",
     Girl: "https://assets.codepen.io/122136/girl-photo.jpg",
     Splash: "https://assets.codepen.io/122136/splash-photo.jpg",
-    wedding: "../img/photo.jpg",
   })
   .onFinishChange(loadImages)
   .name("Image");
@@ -182,7 +181,6 @@ gui
     Dog: "https://assets.codepen.io/122136/dog-depth-map.jpg",
     Girl: "https://assets.codepen.io/122136/girl-depth-map.jpg",
     Splash: "https://assets.codepen.io/122136/splash-depth-map-v1.jpg",
-    wedding: "../img/depth.jpg",
   })
   .onFinishChange(loadImages)
   .name("Depth Map");
