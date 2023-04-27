@@ -275,17 +275,26 @@ window.addEventListener("touchend", (event) => {
 //   true
 // );
 
-window.addEventListener("deviceorientation", handleOrientation);
+if (window.DeviceOrientationEvent) {
+  alert("zzs");
+  window.addEventListener(
+    "deviceorientation",
+    (event) => {
+      const rotateDegrees = event.alpha; // alpha: rotation around z-axis
+      const leftToRight = event.gamma; // gamma: left to right
+      const frontToBack = event.beta; // beta: front back motion
 
-function handleOrientation(event) {
-  const alpha = event.alpha; // 디바이스의 z 축 회전값
-  const beta = event.beta; // 디바이스의 x 축 회전값
-  const gamma = event.gamma; // 디바이스의 y 축 회전값
-
-  // 이벤트가 발생할 때마다 실행할 코드 작성
-
-  alert(alpha);
+      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    },
+    true
+  );
 }
+
+const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+  // do something amazing
+  console.log("zzz");
+  alert("하하하");
+};
 
 /**
  * Renderer
