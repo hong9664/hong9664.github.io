@@ -7,7 +7,7 @@ html,
 body {
   overflow: hidden;
   background-color: black;
-  color: red;
+  color: blue;
 }
 
 .webgl {
