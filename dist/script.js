@@ -284,11 +284,13 @@ window.addEventListener(
 
     // x, y, z 값을 이용하여 적절한 움직임을 적용합니다.
     // 예를 들어, 아래와 같이 움직일 수 있습니다.
-    const moveX = x * 2;
-    const moveY = y * 2;
-    const rotateZ = z;
-    element.style.transform =
-      "translate(" + moveX + "px, " + moveY + "px) rotateZ(" + rotateZ + "deg)";
+    cursor.x = x === 0 || x === 90 ? 0 : x > 0 ? -0.5 : 0.5;
+    cursor.y = y === 0 || y === 90 ? 0 : y > 0 ? -0.5 : 0.5;
+    // const moveX = x * 2;
+    // const moveY = y * 2;
+    // const rotateZ = z;
+    // element.style.transform =
+    //   "translate(" + moveX + "px, " + moveY + "px) rotateZ(" + rotateZ + "deg)";
   },
   true
 );
