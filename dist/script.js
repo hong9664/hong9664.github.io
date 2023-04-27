@@ -284,8 +284,8 @@ window.addEventListener(
     // 예를 들어, 아래와 같이 움직일 수 있습니다.
     // cursor.x = x === 0 || x === 90 ? 0 : x > 0 ? -0.5 : 0.5;
     // cursor.y = y === 0 || y === 90 ? 0 : y > 0 ? -0.5 : 0.5;
-    cursor.x = x === 0 ? 0 : x;
-    cursor.y = y === 0 ? 0 : y;
+    cursor.x = x === 0 ? 0 : x / 100;
+    cursor.y = y === 0 ? 0 : y / 100;
 
     // const moveX = x * 2;
     // const moveY = y * 2;
