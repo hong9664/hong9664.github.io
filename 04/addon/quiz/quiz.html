@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>보험계약법</title>
+        <!-- library -->
+        <link rel="stylesheet" href="./common/css/animate.css">
+        <link rel="stylesheet" href="./common/css/nanumsquare.css">
+        <link rel="stylesheet" href="./common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="./common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="./common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="./addon/quiz/quiz.css">
+        
+        <!-- library -->
+        <script src="./common/js/jquery-3.3.1.min.js"></script>
+        <script src="./common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="./common/js/jquery-ui.player.js"></script>
+        <script src="./common/js/jquery-ui-touch.min.js"></script>
+        <script src="./common/js/jquery.cookie.js"></script>
+        <script>now_page = 0</script>
+    </head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <!-- <div id="top-wrapper">
+                <span class="chapter"></span>
+                <span class="top-title"></span>
+            </div> -->
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <!--<ul class="quiz-tab"></ul>-->
+                        <span class="quiz-num">0</span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span ><img src="./addon/quiz/img/answer.png" alt=""></span><span class="answer-answer">1</span>
+                            <span><img src="./addon/quiz/img/comment.png" alt=""></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="index-wrapper">
+                <p class="btn-index"></p>
+                <p class="btn-close"></p>
+                <ul class="index-inner"></ul>
+            </div>
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <div id="pop-map">
+                <p class="btn-close"></p>
+                <ul>
+                    <li><span>1</span>위험과 보험</li>
+                    <li><span>2</span>보험제도 기초이론</li>
+                    <li><span>3</span>보험계약의 요소</li>
+                    <li><span>4</span>보험계약의 성립</li>
+                    <li><span>5</span>보험계약자의 의무</li>
+                    <li><span>6</span>보험계약의 소멸</li>
+                    <li><span>7</span>보험사고</li>
+                    <li><span>8</span>보상책임</li>
+                </ul>
+                <ul>
+                    <li><span>9</span>손해사정 절차</li>
+                    <li><span>10</span>보험가액 및 손해론</li>
+                    <li><span>11</span>보험금 결정요소</li>
+                    <li><span>12</span>배상책임보험 손해사정이론</li>
+                    <li><span>13</span>보험자대위와 재보험계약</li>
+                    <li><span>14</span>보험수리와 보험회계</li>
+                    <li><span>15</span>사회보험과 보증보험</li>
+                    <li><span style="background:none"></span></li>
+                </ul>
+            </div>
+            <div id="toolbar">
+                <p class="btn-index"></p>
+                <p class="btn-map"></p>
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+                    <span class="currPage">00</span>
+                    <span class="totalpage">00</span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="js/config.js"></script>
+    <script src="./common/js/init.js"></script>
+    <!-- custom -->
+    <script src="js/pageinfo.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/script.js"></script>
+    <!-- common -->
+    <script src="./common/js/video.js"></script>
+    <script src="./common/js/player.js"></script>
+    <script src="./common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 0,
+            question: '',
+            choice: [],
+            answer: 0,
+            comment: ''
+        }];
+    </script>
+    <script src="./addon/quiz/quiz.js"></script>
+</html>
