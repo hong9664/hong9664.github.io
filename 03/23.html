@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>한국계량측정협회</title>
+        <!-- library -->
+        <link rel="stylesheet" href="./common/css/animate.css">
+        <link rel="stylesheet" href="./common/css/nanumsquare.css">
+        <link rel="stylesheet" href="./common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="./common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="./common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="./addon/quiz/quiz.css">
+        
+        <!-- library -->
+        <script language = "javascript" src = "/Campus/inc/class_process.js"></script>
+        <script src="./common/js/jquery-3.3.1.min.js"></script>
+        <script src="./common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="./common/js/jquery-ui.player.js"></script>
+        <script src="./common/js/jquery-ui-touch.min.js"></script>
+        <script src="./common/js/jquery.cookie.js"></script>
+        <script>now_page = 23</script>
+</head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <!-- <div id="top-wrapper">
+                <span class="chapter quiz"></span>
+                <span class="top-title"></span>
+            </div> -->
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <!--<ul class="quiz-tab"></ul>-->
+                        <span class="quiz-num">0</span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span><img src="./addon/quiz/img/answer.png" alt=""></span><span class="answer-answer">1</span>
+                            <span><img src="./addon/quiz/img/comment.png" alt=""></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="index-wrapper">
+                <p class="btn-index"></p>
+                <p class="btn-close"></p>
+                <ul class="index-inner"></ul>
+            </div>
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <!--<div id="pop-map">
+                <p class="btn-close"></p>
+                <ul>
+                    <li><span>1</span>?</li>
+                    <li><span>2</span>?</li>
+                    <li><span>3</span>?</li>
+                    <li><span>4</span>DEWS-BD 시작</li>
+                    <li><span>5</span>DEWS-BD 마법사 (1)</li>
+                    <li><span>6</span>DEWS-BD 마법사 (2)</li>
+                    <li><span>7</span>DEWS-BD 편집기 (1)</li>
+                    <li><span>8</span>DEWS-BD 편집기 (2)</li>
+                    <li><span>9</span>부가기능 (1)</li>
+                    <li><span>10</span>부가기능 (2)</li>
+                    <li><span>11</span>DEWS FD 설치하기 및 상세 구성 요소 (1)</li>
+                    <li><span>12</span>DEWS FD 상세 구성 요소 (2)</li>
+                    <li><span>13</span>주요 컴포넌트 종류와 특징 (1)</li>
+                </ul>
+                <ul>
+                    <li><span>14</span>주요 컴포넌트 종류와 특징 (2)</li>
+                    <li><span>15</span>데이터 소스와 쿼리 빌더</li>
+                    <li><span>16</span>설계 도구 (1)</li>
+                    <li><span>17</span>설계 도구 (2)</li>
+                    <li><span>18</span>전체 프로세스 및 유형별 실습 (1) – 그리드</li>
+                    <li><span>19</span>유형별 실습 (2) – 그리드</li>
+                    <li><span>20</span>유형별 실습 (3) – 그리드</li>
+                    <li><span>21</span>유형별 실습 (4) – 카드리스트</li>
+                    <li><span>22</span>유형별 실습 (5) – 기타 유형 및 타시스템 연동</li>
+                    <li><span>23</span>Wizard 개요 및 실습</li>
+                    <li><span>24</span>DEWS-FD와 DEWS-BD 통합 연계 개발 예제 (1)<br>(DEWS-FD 파일(ewp) 파일로부터 소스생성)</li>
+                    <li><span>25</span>DEWS-FD와 DEWS-BD 통합 연계 개발 예제 (2)<br>(Query로부터 소스생성)</li>
+                    <li><span style="background:none"></span></li>
+                </ul>
+            </div>-->
+            <div id="toolbar">
+                <p class="btn-index"></p>
+                <!--<p class="btn-map"></p>-->
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <!--<div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>-->
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+                    <span class="currPage">00</span>
+                    <span class="totalpage">00</span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="js/config.js"></script>
+    <script src="./common/js/init.js"></script>
+    <!-- custom -->
+    <script src="js/pageinfo.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/script.js"></script>
+    <!-- common -->
+    <script src="./common/js/video.js"></script>
+    <script src="./common/js/player1.js"></script>
+    <script src="./common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 1,
+            question: '정기검사 실시 대상으로 올바른 것은?',
+            choice: ['체중계', '자체정기검사 사업자가 검사하지 않은 음식물 쓰레기 종량제 저울', '귀금속 판매 업소에서 사용하는 검정 눈금 수가 200,000 초과인 전기식 지시 저울 ', '최대 용량이 2kg인 참조용 접시 지시 저울'],
+            answer: 2,
+            comment: '음식물 쓰레기 종량제 저울의 경우 대부분 자체정기검사를 실시하고 있으나 자체정기검사 사업자가 정기검사를 실시하지 않은 경우는 지자체 정기검사를 실시하여야 합니다. 오답인 ①, ③, ④번의 체중계나 검정 눈금수가 100 미만  또는 200,000 초과인 전기식 지시 저울, 최대 용량 2kg이하의 가정용 · 교육용 · 참조용으로 표기된 접시 지시 저울은 형식승인 제외 품목으로 정기검사 대상이 아닙니다.'
+        },{
+            type: 0,
+            question: '2018년도 8월 1일 정기검사를 받은 저울은 2020년 8월 1일 이내에 정기검사를 받아야 한다.',
+            choice: ['', '', '', ''],
+            answer: false,
+            comment: '계량에 관한 법률 제30조(정기검사) 제1항에 따라 정기검사는 시 · 도지사가 2번씩 실시하며, 같은 법 제28조 제1항에 따라 시 · 도지사가 검사 일정을 공고하도록 규정하고 있습니다. 정기검사를 받은 날짜와 관계없이 정기검사를 받은 후 2년이 되는 해의 시 · 도지사가 공고하는 기간 내에 정기검사를 받으면 됩니다.'
+        },{
+            type: 1,
+            question: '정기검사의 오차검사에 대한 설명으로 옳지 않은 것은?',
+            choice: ['오차검사는 3개 구간 이상을 실시해야 한다.', '오차검사는 허용오차가 변하는 부근을 포함하여 설정하는 것이 바람직하다.', '오차검사 시 합부 판정을 위한 사용오차 기준은  1구간 :  ± 1e 이하, 2구간 :  ±2e 이하,  3구간 :  ±3e 이하 이내여야 한다.', '오차검사 3개 구간 중 2개 이상 구간에서 사용오차 이내에 있으면 합격이다.'],
+            answer: 4,
+            comment: '오차검사 합부 판정은  3개 구간 모두 사용오차 이내 있어야 합격이며, 한 구간이 라도 사용오차를 초과할 경우 불합격입니다.'
+        }];
+    </script>
+    <script src="./addon/quiz/quiz.js"></script>
+</html>

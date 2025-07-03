@@ -1,0 +1,17 @@
+#con-wrapper{background-image: url(../img/0111.png) !important;}
+/*#top-wrapper .chapter {padding: 12px 0 0 15px;}*/
+
+#top-wrapper .chapter{margin-top: 12px;}
+
+#top-wrapper .chapter.ch{background:url(../img/chapter.png) no-repeat center left 15px !important;}
+#top-wrapper .chapter.ch0{background:url(../img/chapter0.png) no-repeat center left 15px !important;}
+#top-wrapper .chapter.ch1 {background:url(../img/chapter1.png) no-repeat center left 15px !important;}
+#top-wrapper .chapter.quiz {background:url(../img/chapter_Quiz.png) no-repeat center left 15px !important;}
+#top-wrapper .chapter.summary {background:url(../img/chapter_Summary.png) no-repeat center left 15px !important;}
+
+/*#quiz-wrapper>#quiz-content>.quiz-question{top: 119px !important;}*/
+#prequiz-wrapper>#prequiz-content>.quiz-question{top:235px !important;}
+
+/*#summary-wrapper>.page-wrapper>.btn-prev, #summary-wrapper>.page-wrapper>.btn-next , #summary-wrapper>.page-wrapper>.paginator{display:none !important;}*/
+#summary-wrapper>.page-wrapper>.btn-prev{left: -74px !important;}
+ #summary-wrapper>.page-wrapper>.btn-next{right: -78px !important;}
