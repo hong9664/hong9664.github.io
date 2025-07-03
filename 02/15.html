@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>한국계량측정협회</title>
+        <!-- library -->
+        <link rel="stylesheet" href="./common/css/animate.css">
+        <link rel="stylesheet" href="./common/css/nanumsquare.css">
+        <link rel="stylesheet" href="./common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="./common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="./common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="css/custom.css">
+        
+        <!-- library -->
+        <script language = "javascript" src = "/Campus/inc/class_process.js"></script>
+        <script src="./common/js/jquery-3.3.1.min.js"></script>
+        <script src="./common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="./common/js/jquery-ui.player.js"></script>
+        <script src="./common/js/jquery-ui-touch.min.js"></script>
+        <script src="./common/js/jquery.cookie.js"></script>
+        <script>now_page = 15</script>
+</head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <!-- <div id="top-wrapper">
+                <span class="chapter ch1"></span><span class="ch-text">정기 · 수시검사 및 기타 관리</span>
+                <span class="top-title"></span>
+            </div> -->
+            <div id="content-wrapper"></div>
+            <div id="index-wrapper">
+                <p class="btn-index"></p>
+                <p class="btn-close"></p>
+                <ul class="index-inner"></ul>
+            </div>
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <!--<div id="pop-map">
+                <p class="btn-close"></p>
+                <ul>
+                    <li><span>1</span>?</li>
+                    <li><span>2</span>?</li>
+                    <li><span>3</span>?</li>
+                    <li><span>4</span>DEWS-BD 시작</li>
+                    <li><span>5</span>DEWS-BD 마법사 (1)</li>
+                    <li><span>6</span>DEWS-BD 마법사 (2)</li>
+                    <li><span>7</span>DEWS-BD 편집기 (1)</li>
+                    <li><span>8</span>DEWS-BD 편집기 (2)</li>
+                    <li><span>9</span>부가기능 (1)</li>
+                    <li><span>10</span>부가기능 (2)</li>
+                    <li><span>11</span>DEWS FD 설치하기 및 상세 구성 요소 (1)</li>
+                    <li><span>12</span>DEWS FD 상세 구성 요소 (2)</li>
+                    <li><span>13</span>주요 컴포넌트 종류와 특징 (1)</li>
+                </ul>
+                <ul>
+                    <li><span>14</span>주요 컴포넌트 종류와 특징 (2)</li>
+                    <li><span>15</span>데이터 소스와 쿼리 빌더</li>
+                    <li><span>16</span>설계 도구 (1)</li>
+                    <li><span>17</span>설계 도구 (2)</li>
+                    <li><span>18</span>전체 프로세스 및 유형별 실습 (1) – 그리드</li>
+                    <li><span>19</span>유형별 실습 (2) – 그리드</li>
+                    <li><span>20</span>유형별 실습 (3) – 그리드</li>
+                    <li><span>21</span>유형별 실습 (4) – 카드리스트</li>
+                    <li><span>22</span>유형별 실습 (5) – 기타 유형 및 타시스템 연동</li>
+                    <li><span>23</span>Wizard 개요 및 실습</li>
+                    <li><span>24</span>DEWS-FD와 DEWS-BD 통합 연계 개발 예제 (1)<br>(DEWS-FD 파일(ewp) 파일로부터 소스생성)</li>
+                    <li><span>25</span>DEWS-FD와 DEWS-BD 통합 연계 개발 예제 (2)<br>(Query로부터 소스생성)</li>
+                    <li><span style="background:none"></span></li>
+                </ul>
+            </div>-->
+            <div id="toolbar">
+                <p class="btn-index"></p>
+                <!--<p class="btn-map"></p>-->
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <!--<div class="speed-wrapper">
+                    <p class="btn-slow"></p>
+                    <span class="currspeed">1.0</span><span>배속</span>
+                    <p class="btn-fast"></p>
+                </div>-->
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+                    <span class="currPage">00</span>
+                    <span class="totalpage">00</span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="js/config.js"></script>
+    <script src="./common/js/init.js"></script>
+    <!-- custom -->
+    <script src="js/pageinfo.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/script.js"></script>
+    <!-- common -->
+    <script src="./common/js/video.js"></script>
+    <script src="./common/js/player1.js"></script>
+    <script src="./common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+</html>

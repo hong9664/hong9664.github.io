@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=1010, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>한국계량측정협회</title>
+        <!-- library -->
+        <link rel="stylesheet" href="./common/css/animate.css">
+        <link rel="stylesheet" href="./common/css/nanumsquare.css">
+        <link rel="stylesheet" href="./common/css/nanumsquareround.min.css">
+        <link rel="stylesheet" href="./common/css/jquery.mCustomScrollbar.min.css">
+        <!-- common -->
+        <link rel="stylesheet" href="./common/css/player.css">
+        <!-- custom -->
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- quiz -->
+        <link rel="stylesheet" href="./addon/quiz/quiz.css">
+        
+        <!-- library -->
+        <script language = "javascript" src = "/Campus/inc/class_process.js"></script>
+        <script src="./common/js/jquery-3.3.1.min.js"></script>
+        <script src="./common/js/jquery.mCustomScrollbar.min.js"></script>
+        <script src="./common/js/jquery-ui.player.js"></script>
+        <script src="./common/js/jquery-ui-touch.min.js"></script>
+        <script src="./common/js/jquery.cookie.js"></script>
+        <script>now_page = 16</script>
+</head>
+
+    <body onselectstart="return false" oncontextmenu="return false">
+        <div id="container">
+            <!-- <div id="top-wrapper">
+                <span class="chapter quiz"></span>
+                <span class="top-title"></span>
+            </div> -->
+            <div id="content-wrapper">
+                <div id="quiz-wrapper">
+                    <div id="quiz-home">
+                        <p class="btn-start"></p>
+                    </div>
+                    <div id="quiz-content">
+                        <span class="quiz-num">0</span>
+                        <span class="quiz-question"></span>
+                        <div class="ox-wrapper">
+                            <input type="radio" name="ox" id="ox-o"><label for="ox-o"></label>
+                            <input type="radio" name="ox" id="ox-x"><label for="ox-x"></label>
+                        </div>
+                        <div class="choice-wrapper"></div>
+                        <div class="input-wrapper">
+                            <input type="text" name="input-text" id="input-text">
+                        </div>
+                        <p class="btn-confirm"></p>
+                        <div class="pop"></div>
+                        <div class="answer-wrapper">
+                            <span><img src="./addon/quiz/img/answer.png" alt=""></span><span class="answer-answer">1</span>
+                            <span><img src="./addon/quiz/img/comment.png" alt=""></span><div class="answer-comment"><span></span></div>
+                            <p class="btn-next"></p>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
+                    <div id="quiz-result">
+                        <span class="quiz-count">0</span>
+                        <span class="quiz-score">0</span>
+                        <table class="quiz-result">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <p class="btn-restart"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="index-wrapper">
+                <p class="btn-index"></p>
+                <p class="btn-close"></p>
+                <ul class="index-inner"></ul>
+            </div>
+            <div id="toolbar-mobile">
+                <p class="btn-prev"></p>
+                <p class="btn-next"></p>
+            </div>
+            <div id="toolbar">
+                <p class="btn-index"></p>
+                <div class="timebar-wrapper">
+                    <p class="timebar"><span class="time-range"></span></p>
+                    <time class="currtime" title="현재시간">00:00</time>
+                    <time class="duration" title="전체시간">00:00</time>
+                </div>
+                <p class="btn-play" title="재생"></p>
+                <p class="btn-pause on" title="일시정지"></p>
+                <p class="btn-replay" title="다시보기"></p>
+                <div class="script-wrapper">
+                    <p class="btn-close"></p>
+                    <div class="script-inner">
+                        <span>내레이션</span>
+                        <span></span>
+                    </div>
+                </div>
+                <p class="btn-script"></p>
+                <p class="btn-mute"></p>
+                <div class="volbar"><p class="vol-bar"><span class="vol-range"></span></p></div>
+                <p class="btn-fullscreen"></p>
+                <div class="page-wrapper">
+                    <p class="btn-prev"></p>
+                    <span class="currPage">00</span>
+                    <span class="totalpage">00</span>
+                    <p class="btn-next"></p>
+                </div>
+                <span class="pop-next"></p>
+            </div>
+        </div>
+    </body>
+    <!-- init -->
+    <script src="js/config.js"></script>
+    <script src="./common/js/init.js"></script>
+    <!-- custom -->
+    <script src="js/pageinfo.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/script.js"></script>
+    <!-- common -->
+    <script src="./common/js/video.js"></script>
+    <script src="./common/js/player1.js"></script>
+    <script src="./common/js/interactive.js"></script>
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+    <!-- quiz -->
+    <script>
+        /* quiz
+         * type 0 : ox / 1 : 객관식 / 2 : 주관식
+         * question : 문제 {강조}
+         * choice : 객관식 보기
+         * answer : 정답
+         * comment : 해설
+         */
+        const o = true;
+        const x = false;
+        const quiz = [{
+            type: 1,
+            question: '법정계량기 관리 순서별 올바르게 나열된 것은?',
+            choice: ['형식승인 – 정기검사 – 검정', '형식승인 – 검정 – 재검정', '검정 – 형식승인 – 재검정', '검정 – 재검정 – 형식승인'],
+            answer: 2,
+            comment: '법정계량기는 ‘형식승인’을 받아야 생산이 가능하고 제품 출하 전 계량기의 구조, 오차 등에 대하여 검사하는 ‘검정’을 받아야 합니다. 출하 이후에는 계량기별 사후관리 인 재검정(검정 유효기간 있는 계량기)/정기검사(10t 이하의 비자동 저울)를 통해 정확도를 관리하고 있습니다.'
+        },{
+            type: 1,
+            question: '재검정 대상이 아닌 계량기는?',
+            choice: ['최대용량이 10t 이상의 비자동 저울', '전기자동차 충전기', '요소수미터', '눈새김 탱크'],
+            answer: 4,
+            comment: '「계량에 관한 법률」 제24조(재검정)에 따라 검정을 받은 계량기는 검정유효기간이 만료하기 전에 재검정을 받아야 하는데, 분동, 눈새김 탱크는 재검정 대상에 포함되지 않습니다.'
+        },{
+            type: 1,
+            question: '불법계량기의 유통방지 및 사용 중인 계량기의 정확도 관리를 위하여 시 ‧ 도지사 주체가 되어 실시하는 관리가 아닌 것은?',
+            choice: ['검정', '정기검사', '수시검사', '조사'],
+            answer: 1,
+            comment: '검정이란 불량 계량기의 유통을 방지하고 건전한 상거래 질서를 확립하기 위하여 출하 전에 계량기의 구조, 오차 등에 대하여 실시하는 검사로, 현재 한국기계전기전자시험연구원이 검정기관으로 지정 받아 검정 업무를 수행하고 있습니다.'
+        }];
+    </script>
+    <script src="./addon/quiz/quiz.js"></script>
+</html>
